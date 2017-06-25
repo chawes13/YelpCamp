@@ -1,0 +1,21 @@
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+   padding: 9px;
+}
+
+.userInput {
+    width:66%; 
+    max-width: 400px; 
+    margin: 35px auto;
+}
+
+.deleteForm {
+    display:inline;
+}
