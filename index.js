@@ -12,10 +12,11 @@ var commentRoutes       = require('./routes/comments'),
     campgroundRoutes    = require('./routes/campgrounds'),
     authRoutes          = require('./routes/auth');
 
-//Configuration
-//mongoose.connect("mongodb://localhost/yelp_camp");
-//mongoose.connect("mongodb://admin:3wC^a9LzPZo39L495e@ds147537.mlab.com:47537/yelp_camp");
+//DB Connection
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
 mongoose.connect(process.env.DATABASEURL);
+
+//Configuration
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
